@@ -1,0 +1,35 @@
+#field {
+	margin-top: 150px;
+	margin-left: calc(100%/2 - 318px/2);
+	width: 318px;
+	height: 318px;
+}
+div:not([id="field"]) {
+	width: 100px;
+	height: 100px;
+	border: 1px solid silver;
+	float: left;
+	border-radius: 15px;
+	margin: 2px;
+}
+div:not([id="field"]):hover {
+	background-color: silver;
+}
+p {
+	text-align: center;
+}
+#menu span {
+	border: 2px outset silver;
+	border-radius: 5px;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 5px;
+}
+#menu span:hover {
+	background-color: #7BBE5D;
+	cursor: pointer;
+}
+img {
+	width: 30px;
+	height: 30px;
+}

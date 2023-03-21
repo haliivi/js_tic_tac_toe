@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tic tak toe</title>
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	<script type="text/javascript" src="js/tic_tok_toe.js"></script>
+</head>
+<body>
+	<div id="field" hidden="true">
+		<div id="area_0" onclick="analyzeClick(this)"></div>
+		<div id="area_1" onclick="analyzeClick(this)"></div>
+		<div id="area_2" onclick="analyzeClick(this)"></div>
+		<div id="area_3" onclick="analyzeClick(this)"></div>
+		<div id="area_4" onclick="analyzeClick(this)"></div>
+		<div id="area_5" onclick="analyzeClick(this)"></div>
+		<div id="area_6" onclick="analyzeClick(this)"></div>
+		<div id="area_7" onclick="analyzeClick(this)"></div>
+		<div id="area_8" onclick="analyzeClick(this)"></div>
+	</div>
+	<p id="radio">
+		<input type="radio" name="cross" id="cross">
+		<label for="cross">
+            <img src="img/cross.png" style='vertical-align: middle'>
+        </label>
+		<input type="radio" name="cross" id="zero">
+		<label for="zero">
+            <img src="img/zero.png" style='vertical-align: middle'>
+        </label>
+	</p>
+	<p id="menu">
+		<input type="button" name="play" value="Play" id="play">
+		<input type="reset" name="restart" value="Restart" id="restart">
+	<script type="text/javascript">
+
+		// Show game field
+		document.getElementById('play').onclick = function() {
+			if (document.getElementById('cross').checked || document.getElementById('zero').checked) {
+				document.getElementById('field').hidden = false;
+				document.getElementById('play').disabled = true;
+			} else return;
+		}
+
+		// Reload page
+		document.getElementById('restart').onclick = function() {
+			window.location.reload()
+		}
+
+	</script>
+</body>
+</html>
